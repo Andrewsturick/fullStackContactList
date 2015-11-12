@@ -1,0 +1,50 @@
+doctype html
+html(lang='en')
+  head
+    title Contact List
+    link(href="bower_components/bootstrap/dist/css/bootstrap.min.css", rel='stylesheet')
+    link(href="bower_components/font-awesome/css/font-awesome.min.css", rel='stylesheet')
+    link(href="style.css", rel='stylesheet')
+  body
+    h1= title
+    form.
+    input(type='text', id='name' name='name', placeholder='Name:')
+    input(type='text', id='email' name='email', placeholder='Email:')
+    input(type='text', id='phone' name='phone', placeholder='Number:')
+    input(type='text', id='address' name='address', placeholder='Address:')
+    input(type="submit" id='submit')
+    
+    form.editing.hidden
+        input(type='text', id='editName' name='Name', placeholder='Name:')
+        input(type='text', id='editEmail' name='Email', placeholder='Email:')
+        input(type='text', id='editPhone' name='Phone', placeholder='Number:')
+        input(type='text', id='editAddress' name='Address', placeholder='Address:')
+        input(type="submit" id='editSubmit')
+    
+    
+    table.table
+      thead
+        tr
+          th Name
+          th Email
+          th Number
+          th Address
+          th Edit
+          th Delete
+      tbody
+        each element in contacts
+          tr
+            td.name= element.name
+            td.email= element.email
+            td.phone= element.phone
+            td.address= element.address
+  
+              td.edit
+                i.fa.fa-pencil-square-o.fa-lg
+              td.delete
+                i.fa.fa-trash-o.fa-lg
+  script(src='bower_components/jquery/dist/jquery.min.js')
+  script(src='bower_components/sweetalert/dist/sweetalert.min.js')
+  script(src='main.js')
+    
+    

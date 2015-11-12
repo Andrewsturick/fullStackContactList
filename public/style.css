@@ -1,0 +1,35 @@
+.editing-row-currently{
+  background-color:orange;
+}
+
+
+.modal-body .form-horizontal .col-sm-2,
+.modal-body .form-horizontal .col-sm-10 {
+    width: 100%
+}
+
+.modal-body .form-horizontal .control-label {
+    text-align: left;
+}
+.modal-body .form-horizontal .col-sm-offset-2 {
+    margin-left: 15px;
+}
+
+.editing .hidden{
+display:none;
+}
+
+.editLabel{
+  color:orange;
+  font-size: 2em;
+}
+
+.editing{
+  border: 1px solid orange;
+}
+
+table{
+  margin-top: 50px;
+}
+
+th{  background-color: teal;}
